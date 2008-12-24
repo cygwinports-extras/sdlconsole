@@ -1,0 +1,8 @@
+category: X11
+requires: cygwin libSDL1.2_0 libSDL_image1.2_0
+external-source: sdlconsole
+sdesc: "SDL console library (runtime)"
+ldesc: "SDL_Console is a console that can be added to any SDL 
+application.  A console is meant to be a very simple way of interacting 
+with a program and executing commands.  You can also have more than one
+console at a time."

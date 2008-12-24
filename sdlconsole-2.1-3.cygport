@@ -1,0 +1,10 @@
+DESCRIPTION="SDL drop-down console library"
+HOMEPAGE="http://wacha.ch/wiki/sdlconsole/"
+SRC_URI="mirror://sourceforge/sdlconsole/${P}.tar.gz"
+PATCH_URI="2.1-build.patch"
+
+PKG_NAMES="${PN} libSDL_console2.1_0 libSDL_console-devel"
+libSDL_console2_1_0_CONTENTS="usr/bin/*-2-1-0.dll usr/share/doc/"
+libSDL_console_devel_CONTENTS="usr/include/ usr/lib/"
+
+CYGCONF_ARGS="--enable-sdlimage"

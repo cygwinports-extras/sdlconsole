@@ -1,0 +1,78 @@
+sdlconsole
+-------------------------------------------
+SDL_Console is a console that can be added to any SDL application.  
+A console is meant to be a very simple way of interacting with a program
+and executing commands.  You can also have more than one console at a
+time.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libSDL1.2_0-1.2.13-2
+  libSDL_image1.2_0-1.2.7-1
+
+Build requirements:
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.6a-1
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://wacha.ch/wiki/sdlconsole/
+
+Canonical download:
+  http://downloads.sourceforge.net/sdlconsole/
+
+-------------------------------------------
+
+Build instructions:
+  unpack sdlconsole-2.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./sdlconsole-2.1-X.cygport all
+
+This will create:
+  /usr/src/sdlconsole-2.1-X-src.tar.bz2
+  /usr/src/libSDL_console-devel-2.1-X.tar.bz2
+  /usr/src/libSDL_console2.1_0-2.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libSDL_console2.1_0)
+  /usr/bin/cygSDL_console-2-1-0.dll
+  /usr/share/doc/sdlconsole-2.1/AUTHORS
+  /usr/share/doc/sdlconsole-2.1/COPYING
+  /usr/share/doc/sdlconsole-2.1/INSTALL
+  /usr/share/doc/sdlconsole-2.1/README
+
+(libSDL_console-devel)
+  /usr/include/SDL_console/DT_drawtext.h
+  /usr/include/SDL_console/internal.h
+  /usr/include/SDL_console/SDL_console.h
+  /usr/lib/libSDL_console.a
+  /usr/lib/libSDL_console.dll.a
+  /usr/lib/libSDL_console.la
+
+------------------
+
+Port Notes:
+
+----- version 2.1-3 -----
+Rebuilt.
+
+----- version 2.1-2 -----
+Rebuilt for X11 SDL.
+
+----- version 2.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

@@ -1,0 +1,34 @@
+--- sdlconsole-2.1-orig/Makefile.am	2003-08-28 13:10:25.000000000 -0500
++++ sdlconsole-2.1/Makefile.am	2005-08-04 19:27:23.093750000 -0500
+@@ -1,6 +1,3 @@
+-LIBTOOL_DEPS = @LIBTOOL_DEPS@
+-libtool: $(LIBTOOL_DEPS)
+-	$(SHELL) ./config.status --recheck
+ SUBDIRS = include src
+ 
+ EXTRA_DIST = \
+--- origsrc/sdlconsole-2.1/example/Makefile.am	2003-08-29 15:00:26.000000000 -0500
++++ src/sdlconsole-2.1/example/Makefile.am	2008-12-23 16:20:48.037375000 -0600
+@@ -1,5 +1,5 @@
+ FLAGS=-Wall -g -O2 -pedantic
+-INCLUDES= -I../include
++INCLUDES= -I$(top_srcdir)/include
+ 
+ example_static_SOURCES = ConsoleExample.c split.c
+ example_static_LDFLAGS = -L../src ../src/.libs/libSDL_console.a
+--- sdlconsole-2.1-orig/src/Makefile.am	2003-08-28 11:57:56.000000000 -0500
++++ sdlconsole-2.1/src/Makefile.am	2005-08-05 13:32:42.109375000 -0500
+@@ -1,4 +1,4 @@
+-INCLUDES = -I../include
++INCLUDES = -I$(top_srcdir)/include
+ 
+ lib_LTLIBRARIES = libSDL_console.la
+ 
+@@ -8,6 +8,7 @@
+ 	internal.c
+ 
+ libSDL_console_la_LDFLAGS = \
++	-no-undefined \
+ 	-release $(LT_RELEASE) \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ libSDL_console_la_LIBADD = @CON_LIBS@
