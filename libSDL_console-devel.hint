@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libSDL_console2.1_0 libSDL-devel libSDL_image-devel
+requires: libSDL_console2.1_0 libSDL-devel libSDL_image-devel
 external-source: sdlconsole
 sdesc: "SDL console library (development)"
 ldesc: "SDL_Console is a console that can be added to any SDL 
